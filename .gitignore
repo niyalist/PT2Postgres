@@ -172,3 +172,15 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# For Mac
+.DS_Store
+
+# input 以下の全ファイルを無視（ただし .gitkeep は除く）
+input/*
+!input/.gitkeep
+
+# output 以下の全ファイルを無視（ただし .gitkeep は除く）
+output/*
+!output/.gitkeep
+
