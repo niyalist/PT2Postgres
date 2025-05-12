@@ -1,5 +1,5 @@
 -- Auto-generated CREATE TABLE statement
-CREATE TABLE a2_population_by_employment_type (
+CREATE TABLE pt2018.a2_population_by_employment_type (
     "kzone" TEXT,
     "kzone_name" TEXT,
     "kzone_type" TEXT,

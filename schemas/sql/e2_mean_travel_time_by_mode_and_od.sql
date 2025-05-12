@@ -1,5 +1,5 @@
 -- Auto-generated CREATE TABLE statement
-CREATE TABLE e2_mean_travel_time_by_mode_and_od (
+CREATE TABLE pt2018.e2_mean_travel_time_by_mode_and_od (
     "origin_kzone" TEXT,
     "origin_kzone_name" TEXT,
     "origin_zone_type" TEXT,

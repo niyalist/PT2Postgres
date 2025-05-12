@@ -1,5 +1,5 @@
 -- Auto-generated CREATE TABLE statement
-CREATE TABLE c4_trip_origin_dest_by_facility_and_mode (
+CREATE TABLE pt2018.c4_trip_origin_dest_by_facility_and_mode (
     "kzone" TEXT,
     "kzone_name" TEXT,
     "kzone_type" TEXT,

@@ -1,5 +1,5 @@
 -- Auto-generated CREATE TABLE statement
-CREATE TABLE a1_population_by_age_and_gender (
+CREATE TABLE pt2018.a1_population_by_age_and_gender (
     "kzone" TEXT,
     "kzone_name" TEXT,
     "kzone_type" TEXT,

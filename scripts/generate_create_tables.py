@@ -11,6 +11,11 @@ FORCED_COLUMN_TYPES = {
     "trip_count": "INTEGER",
 }
 
+# スキーマ名（明示）
+SCHEMA_NAME = "pt2018"
+#SCHEMA_NAME = "public"  #このように指定することでpublic スキーマに所属することになる
+
+
 # このスクリプトの位置からの基準パスを定義
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = BASE_DIR / "output"
@@ -36,8 +41,9 @@ def infer_column_types(csv_path: Path, sample_size=100):
     return types
 
 def generate_create_table_statement(table_name: str, column_types: dict) -> str:
+    full_table_name = f"{SCHEMA_NAME}.{table_name}"
     cols = [f'"{col}" {dtype}' for col, dtype in column_types.items()]
-    return f'CREATE TABLE {table_name} (\n    ' + ',\n    '.join(cols) + '\n);'
+    return f'CREATE TABLE {full_table_name} (\n    ' + ',\n    '.join(cols) + '\n);'
 
 def main():
     SCHEMA_DIR.mkdir(parents=True, exist_ok=True)
@@ -55,10 +61,11 @@ def main():
             f.write("-- Auto-generated CREATE TABLE statement\n")
             f.write(statement + "\n")
 
-        include_lines.append(f"\\i sql/{table_name}.sql")
+        include_lines.append(f"\\i schemas/sql/{table_name}.sql")
 
     with open(COMBINED_FILE, "w", encoding="utf-8") as f:
         f.write("-- Run this with psql to create all tables\n\n")
+        f.write(f"CREATE SCHEMA IF NOT EXISTS {SCHEMA_NAME};\n")
         f.write("\n".join(include_lines))
 
 if __name__ == "__main__":

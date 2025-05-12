@@ -1,5 +1,5 @@
 -- Auto-generated CREATE TABLE statement
-CREATE TABLE b4_population_by_time_slot (
+CREATE TABLE pt2018.b4_population_by_time_slot (
     "kzone" TEXT,
     "kzone_name" TEXT,
     "kzone_type" TEXT,

@@ -1,5 +1,5 @@
 -- Auto-generated CREATE TABLE statement
-CREATE TABLE b3_trip_count_by_vehicle_and_purpose (
+CREATE TABLE pt2018.b3_trip_count_by_vehicle_and_purpose (
     "kzone" TEXT,
     "kzone_name" TEXT,
     "kzone_type" TEXT,
