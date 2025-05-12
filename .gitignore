@@ -183,4 +183,4 @@ input/*
 # output 以下の全ファイルを無視（ただし .gitkeep は除く）
 output/*
 !output/.gitkeep
-
+schemas/copy_all_data.sql

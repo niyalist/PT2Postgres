@@ -11,6 +11,6 @@ CREATE TABLE pt2018.b1_trip_stats_by_purpose_age_gender (
     "purpose_code" INTEGER,
     "purpose" TEXT,
     "trip_count" INTEGER,
-    "trips_per_person" INTEGER,
-    "trips_per_mobile_person" INTEGER
+    "trips_per_person" REAL,
+    "trips_per_mobile_person" REAL
 );

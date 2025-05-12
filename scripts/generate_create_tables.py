@@ -3,12 +3,17 @@ from pathlib import Path
 
 # 優先的に使う型マッピング
 FORCED_COLUMN_TYPES = {
+    "lzone": "TEXT",
+    "mzone": "TEXT",
     "kzone": "TEXT",
+    "szone": "TEXT",
     "origin_kzone": "TEXT",
     "destination_kzone": "TEXT",
     "mobility_rate": "REAL",
     "mode_share_percent": "REAL",
     "trip_count": "INTEGER",
+    "trips_per_person": "REAL",
+    "trips_per_mobile_person": "REAL"
 }
 
 # スキーマ名（明示）
