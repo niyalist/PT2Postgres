@@ -183,4 +183,7 @@ input/*
 # output 以下の全ファイルを無視（ただし .gitkeep は除く）
 output/*
 !output/.gitkeep
-schemas/copy_all_data.sql
+schemas/02_copy_all_data.sql
+import_shape_*.sh
+import_shape_*.bat
+schemas/03_postprocess_zones.sql

@@ -25,7 +25,7 @@ SCHEMA_NAME = "pt2018"
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = BASE_DIR / "output"
 SCHEMA_DIR = BASE_DIR / "schemas/sql"
-COMBINED_FILE = BASE_DIR / "schemas/create_all_tables.sql"
+COMBINED_FILE = BASE_DIR / "schemas/01_create_all_tables.sql"
 
 def infer_sql_type(value):
     try:

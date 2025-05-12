@@ -3,7 +3,7 @@ from pathlib import Path
 
 OUTPUT_DIR = Path("output")
 SCHEMA_NAME = "pt2018"
-SCRIPT_PATH = Path("schemas/copy_all_data.sql")
+SCRIPT_PATH = Path("schemas/02_copy_all_data.sql")
 
 def generate_copy_commands():
     system = platform.system()
