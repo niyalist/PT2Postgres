@@ -77,7 +77,7 @@ def split_zone_column(df: pd.DataFrame, col: str) -> pd.DataFrame:
 
             if re.fullmatch(r"\d{4}", code) and (not name or pd.isna(name)):
                 zone_type = "zone"
-            elif name and any(kw in name for kw in ["（その他）", " 不明", "圏域外合計", "以下不明"]):
+            elif name and any(kw in name for kw in ["（その他）", "不明", "圏域外合計", "以下不明"]):
                 zone_type = "other_zone"
             else:
                 zone_type = "summary"

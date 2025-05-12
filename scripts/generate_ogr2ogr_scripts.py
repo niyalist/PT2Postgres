@@ -54,7 +54,7 @@ SET kzone = LPAD(kzone, 4, '0');
 ALTER TABLE pt2018.szone
   ALTER COLUMN szone TYPE text;
 UPDATE pt2018.szone
-SET szone = LPAD(szone, 4, '0');
+SET szone = LPAD(szone, 5, '0');
 """
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(sql, encoding="utf-8")
